@@ -50,7 +50,7 @@ class vandenginx {
       ],
     }
 
-    nginx::resource::server{'www.myhost.com':
+    nginx::resource::vhost{'www.myhost.com':
       www_root => '/opt/html/',
     }
 
