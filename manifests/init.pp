@@ -46,7 +46,7 @@ class vandenginx {
 
     nginx::resource::upstream { 'upstream_app':
       members => [
-        '192.168.99.40.10',
+        '192.168.40.10',
       ],
     }
 
