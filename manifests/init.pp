@@ -44,7 +44,7 @@
 #
 class vandenginx {
 
-  nginx::resource::server{'www.pup.com':
+  profile::nginx::resource::server{'www.pup.com':
     www_root => '/opt/html/',
   }
 
