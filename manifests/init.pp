@@ -43,7 +43,41 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class vandenginx {
-  nginx::resource::server{['www.pup.com'],:
+
+    nginx::resource::upstream { 'upstream_app':
+      members => [
+        '192.168.99.40.10',
+      ],
+    }
+
+    nginx::resource::server{'www.myhost.com':
+      www_root => '/opt/html/',
+    }
+
+    nginx::resource::location{'/proxy':
+      proxy  => 'http://upstream_app/' ,
+      server => 'www.myhost.com',
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ::nginx::resource::server{'www.pup.com':
     www_root => '/opt/html/',
   }
 
