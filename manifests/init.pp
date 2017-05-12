@@ -44,21 +44,10 @@
 #
 class vandenginx {
 
-    nginx::resource::upstream { 'upstream_app':
-      members => [
-        '192.168.40.10',
-      ],
-    }
-
-    nginx::resource::vhost{'index.html':
-      www_root => '/opt/html/',
-    }
-
-    nginx::resource::location{'/proxy':
-      proxy  => 'http://upstream_app/' ,
-      server => 'www.myhost.com',
-
-    }
+  nginx::resource::server { 'nginx.attlocal.net':
+    listen_port => 80,
+    proxy       => 'http://localhost:5601',
+  }
 
 
 
