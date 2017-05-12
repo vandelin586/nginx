@@ -44,7 +44,9 @@
 #
 class vandenginx {
 
-  nginx::resource::server { 'nginx.attlocal.net':
+  include ::nginx
+
+  nginx::resource::server {'nginx.attlocal.net':
     listen_port => 80,
     proxy       => 'http://localhost:5601',
   }
