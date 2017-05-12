@@ -43,8 +43,7 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class vandenginx {
-
-  profile::nginx::resource::server{'www.pup.com':
+  nginx::resource::server{['www.pup.com'],:
     www_root => '/opt/html/',
   }
 
