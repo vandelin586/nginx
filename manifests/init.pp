@@ -46,9 +46,10 @@ class vandenginx {
 
   include ::nginx
 
+  $hostfile  = 'puppet:///modules/vandenginx/index.html',
+
   nginx::resource::server {'nginx.attlocal.net':
-    listen_port => 80,
-    proxy       => 'http://localhost:5601',
+    www_root => $hostfile,
   }
 
 
