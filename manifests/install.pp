@@ -1,7 +1,6 @@
 #Install this silly bugger
 
 class vandenginx::install{
-class{'nginx':}
 
 
 nginx::resource::vhost {'nginx.attlocal.net':
