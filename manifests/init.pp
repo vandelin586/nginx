@@ -57,7 +57,7 @@ class vandenginx {
   source => 'puppet:///modules/vandenginx/index.html',
 }
 
- nginx::resource::server {'nginx.attlocal.net':
+ nginx::resource::server {'nginx':
    www_root => '/tmp/',
    require  => File['host'],
  }
