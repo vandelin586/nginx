@@ -48,8 +48,18 @@ class vandenginx {
 
   $hostfile  = 'puppet:///modules/vandenginx/index.html'
 
+  file {'index':
+  ensure => present,
+  path   => '/tmp/',
+  owner  => 'root',
+  group  => 'root',
+  mode   => '0644',
+  source => 'puppet:///modules/vandenginx/index.html',
+}
+
   nginx::resource::server {'nginx.attlocal.net':
     www_root => $hostfile,
+    require  => File['index'],
   }
 
 
