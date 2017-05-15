@@ -1,5 +1,5 @@
 #Install this silly bugger
-class {'::vandenginx::install':
+class {'vandenginx::install':
 
     nginx::resource::vhost {'nginx.attlocal.net':
   www_root => '/opt/html/consul.html',
