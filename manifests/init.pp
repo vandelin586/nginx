@@ -43,6 +43,7 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class vandenginx {
-  class { '::vandenginx::install':}
+  class { '::vandenginx::install':}  ->
+  class { '::vandenginx::config':}
 
 }
