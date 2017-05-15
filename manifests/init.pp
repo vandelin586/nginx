@@ -46,7 +46,7 @@ class vandenginx {
 
   include ::nginx
 
-  $hostfile  = 'puppet:///modules/vandenginx/index.html',
+  $hostfile  = 'puppet:///modules/vandenginx/index.html'
 
   nginx::resource::server {'nginx.attlocal.net':
     www_root => $hostfile,
