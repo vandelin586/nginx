@@ -2,7 +2,8 @@
 class vandenginx::install{
 
 
-  nginx::resource::vhost {'nginx.attlocal.net':
+  nginx::resource::server {'nginx.attlocal.net':
+  ensure  => present,
   www_root => '/opt/html/consul.html',
   require  => File['host'],
   }
