@@ -43,23 +43,25 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class vandenginx {
+  class { "nginx":
+      absent => true
+    }
+  #include ::nginx
 
-  include ::nginx
+  #$hostfile  = 'puppet:///modules/vandenginx/consul.html'
 
-  $hostfile  = 'puppet:///modules/vandenginx/consul.html'
+  #file { 'host':
+  #ensure => present,
+  #path   => '/opt/html/consul.html',
+  #owner  => 'root',
+  #group  => 'root',
+  #mode   => '0644',
+  #source => 'puppet:///modules/vandenginx/consul.html',
+#}
 
-  file { 'host':
-  ensure => present,
-  path   => '/opt/html/consul.html',
-  owner  => 'root',
-  group  => 'root',
-  mode   => '0644',
-  source => 'puppet:///modules/vandenginx/consul.html',
-}
-
- nginx::resource::server {'nginx.attlocal.net':
-   www_root => '/opt/html/consul.html',
-   require  => File['host'],
+ #nginx::resource::server {'nginx.attlocal.net':
+  # www_root => '/opt/html/consul.html',
+   #require  => File['host'],
  }
 
 
