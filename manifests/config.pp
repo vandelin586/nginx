@@ -1,5 +1,5 @@
 #config setup
-class { vandenginx::config {
+class  vandenginx::config {
   file { 'puppro':
   ensure => present,
   path   => '/opt/html/index.html',
