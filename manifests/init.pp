@@ -45,26 +45,6 @@
 class vandenginx {
   class { "nginx":
       absent => true
-    }
-  #include ::nginx
+  }
 
-  #$hostfile  = 'puppet:///modules/vandenginx/consul.html'
-
-  #file { 'host':
-  #ensure => present,
-  #path   => '/opt/html/consul.html',
-  #owner  => 'root',
-  #group  => 'root',
-  #mode   => '0644',
-  #source => 'puppet:///modules/vandenginx/consul.html',
-#}
-
- #nginx::resource::server {'nginx.attlocal.net':
-  # www_root => '/opt/html/consul.html',
-   #require  => File['host'],
- }
-
-
-
-
-#}
+}
