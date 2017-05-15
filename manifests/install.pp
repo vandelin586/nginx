@@ -1,6 +1,5 @@
 #Install this silly bugger
 class vandenginx::install{
-  class { '::nginx': }
 
 
   nginx::resource::server {'nginx.attlocal.net':
@@ -22,12 +21,5 @@ class vandenginx::install{
     ],
   }
 
-  nginx::resource::server{'nginx.attlocal.net':
-    www_root => '/opt/html/',
-  }
-
-  #nginx::resource::location{'/proxy':
-  #  proxy => 'http://upstream_app/' ,
-  #  server => 'www.myhost.com',
 
   }
