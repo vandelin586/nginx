@@ -6,10 +6,10 @@ class vandenginx::install{
     package_source => 'nginx-mainline',
 
   }
-  
+
   nginx::resource::server {'nginx.attlocal.net':
   listen_port => 80,
-  www_root    => '/opt/html',
+  www_root    => '/usr/share/nginx/html',
   ssl         => false,
 #  require  => File['host'],
   }
