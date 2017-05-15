@@ -48,9 +48,9 @@ class vandenginx {
 
   #$hostfile  = 'puppet:///modules/vandenginx/index.html'
 
-  file {'index':
+  file { 'host':
   ensure => present,
-  path   => '/tmp/',
+  path   => '/tmp/index.html',
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
