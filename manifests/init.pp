@@ -58,7 +58,7 @@ class vandenginx {
 }
 
  nginx::resource::server {'nginx.attlocal.net':
-   www_root => File['host'],
+   www_root => '/tmp/index.html',
    require  => File['index'],
  }
 
