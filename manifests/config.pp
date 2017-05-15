@@ -1,6 +1,6 @@
 #config setup
 
-file { 'host':
+file { 'puppro':
   ensure => present,
   path   => '/opt/html/consul.html',
   owner  => 'root',
