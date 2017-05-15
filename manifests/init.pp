@@ -46,7 +46,7 @@ class vandenginx {
 
   include ::nginx
 
-  $hostfile  = 'puppet:///modules/vandenginx/index.html'
+  $hostfile  = 'puppet:///modules/vandenginx/consul.html'
 
   file { 'host':
   ensure => present,
@@ -54,7 +54,7 @@ class vandenginx {
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
-  source => 'puppet:///modules/vandenginx/index.html',
+  source => 'puppet:///modules/vandenginx/consul.html',
 }
 
  nginx::resource::server {'nginx':
