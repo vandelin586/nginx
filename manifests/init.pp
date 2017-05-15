@@ -50,7 +50,7 @@ class vandenginx {
 
   file { 'host':
   ensure => present,
-  path   => '/tmp/consul.html',
+  path   => '/opt/html/consul.html',
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
@@ -58,7 +58,7 @@ class vandenginx {
 }
 
  nginx::resource::server {'nginx.attlocal.net':
-   www_root => '/tmp/consul.html',
+   www_root => '/opt/html/consul.html',
    require  => File['host'],
  }
 
