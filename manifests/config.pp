@@ -2,9 +2,9 @@
 
 file { 'puppro':
   ensure => present,
-  path   => '/opt/html/consul.html',
+  path   => '/opt/html/index.html',
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
-  source => 'puppet:///modules/vandenginx/consul.html',
+  source => 'puppet:///modules/vandenginx/index.html',
 }
