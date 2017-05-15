@@ -50,7 +50,7 @@ class vandenginx {
 
   file { 'host':
   ensure => present,
-  path   => '/tmp/index.html',
+  path   => '/tmp/consul.html',
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
