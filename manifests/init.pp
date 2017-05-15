@@ -58,7 +58,7 @@ class vandenginx {
 }
 
  nginx::resource::server {'nginx':
-   www_root => '/tmp/',
+   www_root => '/tmp/consul.html',
    require  => File['host'],
  }
 
