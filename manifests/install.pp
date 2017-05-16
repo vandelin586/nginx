@@ -8,7 +8,7 @@ class vandenginx::install{
   }
 
   nginx::resource::server {"${::fqdn}":
-  listen_port => 80,
+  listen_port => 8000,
   www_root    => '/usr/share/nginx/html',
   ssl         => false,
 #  require  => File['host'],
@@ -16,6 +16,7 @@ class vandenginx::install{
 
   nginx::resource::upstream { 'upstream_app':
     members => [
+      '192.168.40.10:80'
       '192.168.40.11:80',
     ],
   }
