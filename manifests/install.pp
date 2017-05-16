@@ -16,7 +16,7 @@ class vandenginx::install{
 
   nginx::resource::upstream { 'upstream_app':
     members => [
-      '192.168.40.10:8000',
+      '192.168.40.10:80',
     ],
   }
 
