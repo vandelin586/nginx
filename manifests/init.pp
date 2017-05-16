@@ -43,6 +43,7 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class vandenginx {
+  notify {"{::fqdn}"}
   class { '::vandenginx::config':} ->
   class { '::vandenginx::install':}
 
