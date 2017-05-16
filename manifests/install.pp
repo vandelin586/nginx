@@ -8,7 +8,7 @@ class vandenginx::install{
   }
 
   nginx::resource::server {'nginx.attlocal.net':
-  listen_port => 80,
+  listen_port => 8000,
   www_root    => '/usr/share/nginx/html',
   ssl         => false,
 #  require  => File['host'],
