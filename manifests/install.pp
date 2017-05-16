@@ -7,7 +7,7 @@ class vandenginx::install{
 
   }
 
-  nginx::resource::server {'nginx.attlocal.net':
+  nginx::resource::server {"${::fqdn}":
   listen_port => 80,
   www_root    => '/usr/share/nginx/html',
   ssl         => false,
