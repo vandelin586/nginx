@@ -7,7 +7,7 @@ class vandenginx::install{
 
   }
 
-  nginx::resource::server {"${::fqdn}":
+  nginx::resource::server {${::fqdn}:
   listen_port => 8000,
   www_root    => '/usr/share/nginx/html',
   ssl         => false,
